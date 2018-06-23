@@ -1,0 +1,10 @@
+[master]
+master.det.nsw.edu.au
+
+[slaves]
+slave1.det.nsw.edu.au
+slave2.det.nsw.edu.au
+
+[domain:children]
+master
+slaves
