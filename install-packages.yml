@@ -15,6 +15,5 @@
     - name: install packages
       yum:
          name: java-1.8.0-oracle
-         status: present
 
  
