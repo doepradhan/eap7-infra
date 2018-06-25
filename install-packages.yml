@@ -14,10 +14,7 @@
    tasks:
     - name: install packages
       yum:
-         name: "{{ item }}"
+         name: java-1.8.0-oracle
          status: present
-      with_items: 
-         - java-1.8.0-oracle
-         - java-1.8.0-oracle-devel
 
  
