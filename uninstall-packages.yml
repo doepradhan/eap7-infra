@@ -1,0 +1,20 @@
+---
+#
+# Playbook to install packages to build jboss domain
+#
+# Mustaq Pradhan
+# 25 June 2018
+#
+ - name: install packages
+   hosts: domain
+   gather_facts: true
+   become: true
+   become_user: root
+
+   tasks:
+    - name: install packages
+      yum:
+         name: java-1.7.0-openjdk.x86_64
+         state: absent
+
+ 
