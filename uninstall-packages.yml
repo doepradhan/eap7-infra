@@ -1,6 +1,7 @@
 ---
 #
-# Playbook to install packages to build jboss domain
+# Playbook to uninstall packages those were installed to build jboss domain
+# This is done to refresh the hosts
 #
 # Mustaq Pradhan
 # 25 June 2018
@@ -12,9 +13,10 @@
    become_user: root
 
    tasks:
-    - name: install packages
+    - name: uninstall packages
       yum:
-         name: java-1.7.0-openjdk.x86_64
-         state: absent
+         name: "{{ item }}"
+         state: removed
+      with_items: "{{ packages }}"
 
  
